@@ -1,0 +1,391 @@
+/* ==========================================
+   1. CONFIGURACIÓ GENERAL
+   ========================================== */
+
+/* El símbol * selecciona tots els elements HTML */
+* {
+    margin: 0;                /* Elimina els marges exteriors */
+    padding: 0;               /* Elimina els espais interiors */
+    box-sizing: border-box;   /* Inclou el padding i la vora en la grandària */
+}
+
+/* Estils generals de tota la pàgina */
+body {
+    font-family: Arial, sans-serif; /* Tipus de lletra */
+    line-height: 1.6;               /* Espai entre les línies */
+    background-color: #f4f4f9;      /* Fons gris molt clar */
+    color: #333;                    /* Text gris fosc */
+}
+
+
+/* ==========================================
+   2. TARGETES DELS SERVEIS
+   ========================================== */
+
+/* Selecciona tots els articles de la pàgina */
+article {
+    background-color: white;      /* Fons blanc */
+    border: 2px solid darkblue;   /* Vora blava de 2 píxels */
+    border-radius: 12px;          /* Arredonix les cantonades */
+    box-shadow: 0 4px 10px gray;  /* Afig una ombra grisa */
+    padding: 20px;                /* Espai entre el contingut i la vora */
+    margin: 20px;                 /* Espai exterior al voltant de la targeta */
+}
+
+/* Canvia l'aspecte quan passem el ratolí per damunt */
+article:hover {
+    background-color: lightblue; /* Canvia el fons a blau clar */
+    box-shadow: 0 6px 15px gray; /* Augmenta l'ombra */
+}
+
+/* Selecciona els títols h3 que estan dins dels articles */
+article h3 {
+    color: darkblue;       /* Títols de color blau fosc */
+    margin-bottom: 10px;   /* Espai davall del títol */
+}
+
+/* Selecciona els paràgrafs que estan dins dels articles */
+article p {
+    color: black;          /* Text de color negre */
+    margin-bottom: 15px;   /* Espai davall del paràgraf */
+}
+
+/* Estils de les imatges de les targetes */
+article img {
+    width: 100%;          /* Ocupa tota l'amplària disponible */
+    height: 200px;        /* Alçària de 200 píxels */
+    object-fit: cover;    /* Ompli l'espai sense deformar la imatge */
+    border-radius: 8px;   /* Arredonix les cantonades de la imatge */
+}
+
+
+/* ==========================================
+   3. TÍTOL I INTRODUCCIÓ DEL FORMULARI
+   ========================================== */
+
+/* Selecciona el títol h2 de la secció de sol·licitud */
+#solicitud h2 {
+    text-align: center;  /* Centra el text */
+    color: darkblue;     /* Posa el títol en blau fosc */
+    margin-bottom: 10px; /* Deixa espai davall del títol */
+}
+
+/* Estils del text introductori del formulari */
+.intro-formulari {
+    text-align: center;  /* Centra el text */
+    margin-bottom: 25px; /* Deixa espai davall */
+    color: #555;         /* Text gris fosc */
+}
+
+
+/* ==========================================
+   4. CAIXA PRINCIPAL DEL FORMULARI
+   ========================================== */
+
+/* Selecciona el formulari que té la classe formulari */
+.formulari {
+    max-width: 650px;          /* Amplària màxima de 650 píxels */
+    width: calc(100% - 30px);  /* Deixa espai als costats */
+    margin: 0 auto 30px;       /* Centra la caixa i deixa espai davall */
+    padding: 30px;             /* Espai interior */
+    background-color: white;   /* Fons blanc */
+    border: 1px solid #ddd;    /* Vora gris clara */
+    border-radius: 15px;       /* Cantonades arredonides */
+    box-shadow: 0 4px 12px #00000015; /* Ombra suau i transparent */
+}
+
+
+/* ==========================================
+   5. GRUPS I ETIQUETES DEL FORMULARI
+   ========================================== */
+
+/* Cada grup conté una etiqueta i el seu camp */
+.grup-camp {
+    margin-bottom: 20px; /* Separa els grups entre si */
+}
+
+/* Selecciona les etiquetes dins dels grups */
+.grup-camp label {
+    display: block;       /* L'etiqueta ocupa una línia */
+    font-weight: bold;    /* Posa el text en negreta */
+    margin-bottom: 8px;   /* Deixa espai davall de l'etiqueta */
+    color: #234B8B;       /* Text blau */
+}
+
+
+/* ==========================================
+   6. ESTILS DELS CAMPS
+   ========================================== */
+
+/*
+   Selecciona els camps d'entrada, els selectors
+   i les àrees de text que estan dins del formulari.
+
+   :not() exclou els botons d'opció i les caselles
+   de verificació perquè tinguen una grandària normal.
+*/
+
+.formulari input:not([type="radio"]):not([type="checkbox"]),
+.formulari select,
+.formulari textarea {
+    width: 100%;                 /* Ocupa tota l'amplària disponible */
+    padding: 12px;               /* Espai interior del camp */
+    border: 1px solid #b8c4d6;   /* Vora gris blavosa */
+    border-radius: 8px;          /* Cantonades arredonides */
+    font-size: 16px;             /* Grandària de la lletra */
+    font-family: Arial, sans-serif; /* Tipus de lletra */
+    background-color: white;     /* Fons blanc */
+    color: #333;                 /* Text gris fosc */
+}
+
+/* Canvia l'aspecte del camp quan el seleccionem */
+.formulari input:focus,
+.formulari select:focus,
+.formulari textarea:focus {
+    outline: none;                 /* Elimina el contorn predeterminat */
+    border: 2px solid #234B8B;     /* Vora blava més gruixuda */
+    box-shadow: 0 0 5px #234B8B40; /* Ombra blava suau */
+}
+
+/* Permet canviar l'alçària de la descripció */
+.formulari textarea {
+    resize: vertical; /* Només permet redimensionar verticalment */
+}
+
+
+/* ==========================================
+   7. GRUP DEL TIPUS D'ASSISTÈNCIA
+   ========================================== */
+
+/* Caixa que envolta les opcions d'assistència */
+.grup-assistencia {
+    border: 1px solid #ddd; /* Vora gris clara */
+    border-radius: 8px;     /* Cantonades arredonides */
+    padding: 15px;          /* Espai interior */
+    margin-bottom: 20px;    /* Espai davall de la caixa */
+}
+
+/* Títol del grup d'assistència */
+.grup-assistencia legend {
+    color: #234B8B;    /* Text blau */
+    font-weight: bold; /* Text en negreta */
+    padding: 0 5px;    /* Espai als costats del títol */
+}
+
+/* Organitza les opcions amb Flexbox */
+.opcions-assistencia {
+    display: flex;     /* Activa Flexbox */
+    flex-wrap: wrap;   /* Permet passar a una altra línia */
+    gap: 15px;         /* Espai entre les opcions */
+}
+
+/* Alinea cada botó d'opció amb el seu text */
+.opcions-assistencia label {
+    display: flex;       /* Col·loca els elements en una fila */
+    align-items: center; /* Els alinea verticalment */
+    gap: 6px;             /* Espai entre el botó i el text */
+    cursor: pointer;     /* Mostra el cursor en forma de mà */
+}
+
+
+/* ==========================================
+   8. BOTONS D'OPCIÓ I CASELLES
+   ========================================== */
+
+/* Selecciona els botons d'opció i les caselles */
+.formulari input[type="radio"],
+.formulari input[type="checkbox"] {
+    width: auto;            /* Manté la grandària normal */
+    accent-color: darkblue; /* Color blau quan estan seleccionats */
+    cursor: pointer;        /* Indica que es poden clicar */
+}
+
+
+/* ==========================================
+   9. CASELLA DE PRIVACITAT
+   ========================================== */
+
+/* Col·loca la casella al costat del text */
+.grup-privacitat {
+    display: flex;          /* Organitza els elements en una fila */
+    align-items: flex-start; /* Alinea els elements pel principi */
+    gap: 10px;               /* Espai entre la casella i el text */
+    margin-bottom: 25px;     /* Espai davall del grup */
+}
+
+/* Estils del text de privacitat */
+.grup-privacitat label {
+    cursor: pointer; /* Permet clicar el text */
+    line-height: 1.5; /* Millora l'espai entre les línies */
+}
+
+
+/* ==========================================
+   10. BOTONS DEL FORMULARI
+   ========================================== */
+
+/* Contenidor dels botons d'enviar i esborrar */
+.botons-formulari {
+    display: flex;   /* Col·loca els botons amb Flexbox */
+    flex-wrap: wrap; /* Permet que passen a una altra línia */
+    gap: 12px;       /* Espai entre els botons */
+}
+
+/* Estils comuns dels botons */
+.botons-formulari button {
+    padding: 12px 18px; /* Espai interior */
+    border: none;       /* Elimina la vora */
+    border-radius: 8px; /* Arredonix les cantonades */
+    cursor: pointer;    /* Mostra el cursor en forma de mà */
+    font-size: 15px;    /* Grandària del text */
+    transition: background-color 0.2s; /* Suavitza el canvi de color */
+}
+
+/* Botó principal per a enviar el formulari */
+.botons-formulari button[type="submit"] {
+    flex: 1;                 /* Ocupa l'espai disponible */
+    background-color: darkblue; /* Fons blau fosc */
+    color: white;             /* Text blanc */
+}
+
+/* Canvia el color del botó d'enviar en passar el ratolí */
+.botons-formulari button[type="submit"]:hover {
+    background-color: #345da8; /* Blau més clar */
+    color: white;              /* Manté el text blanc */
+}
+
+/* Botó per a esborrar el formulari */
+.botons-formulari button[type="reset"] {
+    background-color: #e5e7eb; /* Fons gris clar */
+    color: #333;               /* Text gris fosc */
+}
+
+/* Canvia el color del botó d'esborrar en passar el ratolí */
+.botons-formulari button[type="reset"]:hover {
+    background-color: #d1d5db; /* Gris una mica més fosc */
+}
+
+
+/* ==========================================
+   11. NOTA DEL FORMULARI
+   ========================================== */
+
+/* Text informatiu sobre els camps obligatoris */
+.nota-formulari {
+    margin-top: 15px; /* Espai per damunt */
+    font-size: 13px;  /* Text més menut */
+    color: #666;      /* Text gris */
+}
+
+
+/* ==========================================
+   12. ADAPTACIÓ A MÒBILS
+   ========================================== */
+
+/*
+   Aquestes regles només s'apliquen quan
+   la pantalla té 600 píxels o menys.
+*/
+
+@media (max-width: 600px) {
+
+    /* Redueix l'espai interior del formulari */
+    .formulari {
+        padding: 18px;
+        margin: 0 10px 25px;
+    }
+
+    /* Col·loca els botons en vertical */
+    .botons-formulari {
+        flex-direction: column;
+    }
+
+    /* Fa que cada botó ocupe tota l'amplària */
+    .botons-formulari button {
+        width: 100%;
+    }
+}
+
+
+/* ==========================================
+   13. MODE FOSC DEL FORMULARI
+   ========================================== */
+
+/* Canvia el fons i la vora del formulari */
+.dark-mode .formulari {
+    background-color: #303030; /* Fons gris fosc */
+    border-color: #555;        /* Vora gris */
+}
+
+/* Canvia el color dels títols i les etiquetes */
+.dark-mode .formulari .grup-camp label,
+.dark-mode .grup-assistencia legend {
+    color: #b8d2ff; /* Blau clar per a llegir millor */
+}
+
+/* Canvia els colors dels camps */
+.dark-mode .formulari input:not([type="radio"]):not([type="checkbox"]),
+.dark-mode .formulari select,
+.dark-mode .formulari textarea {
+    background-color: #424242; /* Fons gris fosc */
+    color: white;               /* Text blanc */
+    border-color: #777;         /* Vora grisa */
+}
+
+/* Canvia el color dels textos secundaris */
+.dark-mode .intro-formulari,
+.dark-mode .grup-privacitat label,
+.dark-mode .nota-formulari {
+    color: #ddd; /* Gris clar */
+}
+
+/* Canvia la vora del grup d'assistència */
+.dark-mode .grup-assistencia {
+    border-color: #555;
+}
+
+
+/* ==========================================
+   14. MENÚ DE NAVEGACIÓ
+   ========================================== */
+
+/* Col·loca els elements del menú en horitzontal */
+nav ul {
+    display: flex;            /* Activa Flexbox */
+    flex-direction: row;      /* Col·loca els elements en una fila */
+    justify-content: center;  /* Centra els elements horitzontalment */
+    align-items: center;      /* Els centra verticalment */
+    gap: 20px;                /* Espai entre els enllaços */
+}
+
+
+/* ==========================================
+   15. SERVEIS AMB FLEXBOX
+   ========================================== */
+
+/* Organitza les targetes dels serveis */
+.contenedor-servicios {
+    display: flex;            /* Activa Flexbox */
+    flex-direction: row;      /* Col·loca les targetes en una fila */
+    justify-content: center;  /* Centra les targetes */
+    align-items: stretch;     /* Estira les targetes en alçària */
+    gap: 20px;                /* Espai entre les targetes */
+    flex-wrap: wrap;          /* Permet passar a una altra fila */
+}
+
+/* Fa que les targetes compartisquen l'espai disponible */
+.contenedor-servicios article {
+    flex: 1;            /* Permet que cresquen per igual */
+    min-width: 250px;   /* Amplària mínima de cada targeta */
+}
+
+
+/* ==========================================
+   16. MODE FOSC DE TOTA LA WEB
+   ========================================== */
+
+/* JavaScript activa o desactiva aquesta classe */
+.dark-mode {
+    background-color: #222; /* Fons gris molt fosc */
+    color: white;            /* Text blanc */
+}

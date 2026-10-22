@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que utilitzem HTML5 -->
+
+<html lang="val">
+<!-- Element principal de la pàgina.
+     lang="es" indica que el contingut està en castellà -->
+
+<head>
+    <!-- Conté informació sobre la pàgina i els recursos que necessita -->
+
+    <meta charset="UTF-8">
+    <!-- Permet mostrar correctament accents, ñ i altres caràcters -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adapta l'amplària de la pàgina a la pantalla del dispositiu -->
+
+    <meta name="author" content="Zaira Martinez Sanchez">
+    <!-- Indica qui és l'autora de la pàgina -->
+
+    <meta name="description" content="Reparación de malware.">
+    <!-- Descripció breu del contingut de la web -->
+
+    <meta name="keywords" content="reparaciones, malware, microinformatica">
+    <!-- Paraules clau relacionades amb el contingut -->
+
+    <title>Web taller</title>
+    <!-- Títol que apareix en la pestanya del navegador -->
+
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Connecta el document HTML amb el fitxer CSS dels estils -->
+
+    <script src="JS/main.js" defer></script>
+    <!-- Connecta el fitxer JavaScript.
+         defer fa que s'execute després de llegir l'HTML -->
+
+</head>
+
+<body>
+    <!-- Ací comença tot el contingut visible de la pàgina -->
+
+    <header>
+        <!-- Capçalera de la web -->
+
+        <h1>Reparaciones locales</h1>
+        <!-- Títol principal de la pàgina -->
+
+        <nav>
+            <!-- Menú de navegació -->
+
+            <ul>
+                <!-- Llista no ordenada de links -->
+
+                <li><a href="#servicios">Servicios</a></li>
+                <!-- Enllaça amb la secció que té id="servicios" -->
+
+                <li><a href="#solicitud">Solicitud</a></li>
+                <!-- Enllaça amb el formulari -->
+
+                <li><a href="#contacte">Contacto</a></li>
+                <!-- Enllaça amb la secció de contacte -->
+
+            </ul>
+        </nav>
+
+        <button id="btn-theme">Modo Oscuro</button>
+        <!-- Botó que JavaScript utilitza per a canviar el tema.
+             L'id permet seleccionar-lo amb querySelector("#btn-theme") -->
+
+    </header>
+
+
+    <main>
+        <!-- Contingut principal de la pàgina -->
+
+
+        <!-- SECCIÓ DE SERVICIS -->
+
+        <section id="servicios">
+            <!-- section agrupa contingut relacionat.
+                 L'id permet arribar ací des del menú -->
+
+            <h2>Averías más frecuentes</h2>
+            <!-- Títol de la secció -->
+
+            <div class="contenedor-servicios">
+                <!-- div és un contenidor per a agrupar les targetes.
+                     La classe permet aplicar estils CSS o Flexbox -->
+
+                <article>
+                    <!-- article representa un contingut independent -->
+
+                    <h3>El ordenador no enciende</h3>
+                    <!-- Títol de la primera avaria -->
+
+                    <p>
+                        Una de las averías más comunes es que el ordenador no se encienda.
+                        El problema puede deberse a la fuente de alimentación, al cableado,
+                        a la batería en el caso de los portátiles o a algún componente interno.
+                    </p>
+                    <!-- p crea un paràgraf de text -->
+
+                    <img src="assets/img/malware.jpg"
+                         alt="Podria ser degut a programari maliciós">
+                    <!-- img mostra una imatge.
+                         src indica on està guardada.
+                         alt descriu la imatge si no es pot mostrar -->
+
+                </article>
+
+
+                <article>
+                    <!-- Segona targeta de servei -->
+
+                    <h3>Ordenador lento</h3>
+
+                    <p>
+                        Con el tiempo, un ordenador puede funcionar más lentamente debido
+                        a la acumulación de archivos innecesarios, demasiados programas
+                        ejecutándose al iniciar el sistema, falta de espacio de almacenamiento
+                        o componentes que necesitan una actualización.
+                    </p>
+
+                    <img src="assets/img/manteniment.jpg"
+                         alt="Manteniment lent de l'ordinador">
+                    <!-- Mostra la imatge relacionada amb el manteniment -->
+
+                </article>
+
+
+                <article>
+                    <!-- Tercera targeta de servei -->
+
+                    <h3>Sobrecalentamiento</h3>
+
+                    <p>
+                        El sobrecalentamiento puede producirse por la acumulación de polvo
+                        en los ventiladores y disipadores o por una ventilación insuficiente.
+                        Es importante limpiar periódicamente el equipo y comprobar que los
+                        sistemas de refrigeración funcionan correctamente.
+                    </p>
+
+                    <img src="assets/img/xarxes.jpg"
+                         alt="A les xarxes també pot sobreescalfar-se">
+                    <!-- Imatge de la tercera targeta -->
+
+                </article>
+
+            </div>
+            <!-- Ací acaba el contenidor de les tres targetes -->
+
+            <h6>Mantenimiento habitual</h6>
+            <!-- Títol de nivell 6.
+                 Els encapçalaments van de h1 a h6.
+                 Seria més adequat utilitzar h3 o h2 segons l'estructura -->
+
+            <p>
+                Para mantener un equipo informático en buen estado es recomendable
+                realizar limpiezas periódicas, actualizar el sistema operativo y los
+                programas, mantener copias de seguridad y revisar el estado de los
+                componentes.
+            </p>
+            <!-- Paràgraf sobre el manteniment -->
+
+        </section>
+
+
+        <!-- FORMULARI DE SOL·LICITUD -->
+
+        <section id="solicitud">
+            <!-- Secció que conté el formulari -->
+
+
+    <h2>Sol·licitud d'assistència tècnica</h2>
+
+     <p class="intro-formulari">
+        Ompli les dades següents per a sol·licitar una reparació.
+        T'ajudarem a resoldre el problema del teu equip.
+    </p>
+
+    <form action="#" method="post" class="formulari">
+
+        <!-- CAMP DEL NOM -->
+        <div class="grup-camp">
+            <label for="nombre">Nom complet *</label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escriu el teu nom"
+                required
+            >
+        </div>
+
+        <!-- CAMP DEL CORREU -->
+        <div class="grup-camp">
+            <label for="email">Correu electrònic *</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="exemple@correu.com"
+                required
+            >
+        </div>
+
+        <!-- CAMP DEL TELÈFON -->
+        <div class="grup-camp">
+            <label for="telefono">Telèfon</label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="El teu número de telèfon"
+            >
+        </div>
+
+        <!-- SELECCIÓ DEL DISPOSITIU -->
+        <div class="grup-camp">
+            <label for="tipo">Tipus de dispositiu *</label>
+
+            <select id="tipo" name="tipo" required>
+                <option value="">Selecciona un dispositiu</option>
+                <option value="ordenador">Ordinador de sobretaula</option>
+                <option value="portatil">Ordinador portàtil</option>
+                <option value="impresora">Impressora</option>
+                <option value="xarxes">Xarxes</option>
+                <option value="mobil">Mobil</option>
+                <option value="otro">Un altre dispositiu</option>
+            </select>
+        </div>
+
+        <!-- DESCRIPCIÓ DE L'AVARIA -->
+        <div class="grup-camp">
+            <label for="problema">Descriu l'avaria *</label>
+
+            <textarea
+                id="problema"
+                name="problema"
+                rows="5"
+                placeholder="Explica què li passa al teu equip..."
+                required
+            ></textarea>
+        </div>
+
+        <!-- TIPUS D'ASSISTÈNCIA -->
+        <fieldset class="grup-assistencia">
+
+            <legend>Tipus d'assistència *</legend>
+
+            <div class="opcions-assistencia">
+
+                <label>
+                    <input
+                        type="radio"
+                        id="presencial"
+                        name="asistencia"
+                        value="presencial"
+                        required
+                    >
+                    Presencial
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        id="remota"
+                        name="asistencia"
+                        value="remota"
+                    >
+                    A distància
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        id="telefonica"
+                        name="asistencia"
+                        value="telefonica"
+                    >
+                    Telefònica
+                </label>
+
+            </div>
+
+        </fieldset>
+
+        <!-- ACCEPTACIÓ DE LA PRIVACITAT -->
+        <div class="grup-privacitat">
+
+            <input
+                type="checkbox"
+                id="privacidad"
+                name="privacidad"
+                required
+            >
+
+            <label for="privacidad">
+                Accepte el tractament de les meues dades personals.
+            </label>
+
+        </div>
+
+        <!-- BOTONS DEL FORMULARI -->
+        <div class="botons-formulari">
+
+            <button type="submit">
+                Sol·licitar assistència
+            </button>
+
+            <button type="reset">
+                Esborrar el formulari
+            </button>
+
+        </div>
+
+        <p class="nota-formulari">* Camps obligatoris</p>
+
+    </form>
+
+</section>
+
+        <!-- SECCIÓ DE CONTACTE -->
+
+        <section id="contacte">
+            <!-- L'id coincideix amb l'enllaç Contacto del menú -->
+
+            <h2>Contacto</h2>
+
+            <p>
+                Para contactar con nuestro taller de reparaciones,
+                puede utilizar el formulario de solicitud de asistencia técnica.
+                Pero te pasamos la ubicación calle c/ ausias march 4 46800 Xàtiva telefono +34 654 36 97 05
+            </p>
+            <!-- Informació de contacte del taller -->
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <!-- Peu de pàgina: sol contindre informació legal i drets d'autor -->
+
+        <div>
+
+            <p>
+                &copy; 2026 Web Taller - Todos los derechos reservados.
+            </p>
+            <!-- &copy; representa el símbol © -->
+
+            <p>
+                Esta obra está bajo una Licencia
+
+                <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es"
+                   target="_blank"
+                   rel="noopener">
+                    <!-- a crea un enllaç.
+                         href indica la destinació.
+                         target="_blank" l'obri en una pestanya nova.
+                         rel="noopener" millora la seguretat de l'enllaç -->
+
+                    Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)
+
+                </a>.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
